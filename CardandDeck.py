@@ -42,7 +42,7 @@ class Deck:
 
 class Shoe:
 
-    def __init__(self, number_of_decks):
+    def __init__(self, number_of_decks=1):
         self.number_of_decks = number_of_decks
         self.decks = [Deck() for _ in range(number_of_decks)]
 
