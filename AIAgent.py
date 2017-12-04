@@ -7,7 +7,8 @@
 
 # Appropriate Code snippets taken from QLearning Assignment of Pacman
 
-import Dealer, util, random, sys
+import Dealer, util, random
+import FeatureExtractors
 
 
 class FeatureAgent:
