@@ -48,11 +48,7 @@ class SimpleExtractor(FeatureExtractor):
         features["bias"] = 1.0
 
         for each_card in discarded:
-            # if each_card.rank in [11, 12, 13]:
-            #     value_discarded += 10
-            # else:
-            #     value_discarded += each_card.rank
-            value_discarded = min(10, each_card.rank)
+            value_discarded += min(10, each_card.rank)
 
         if action == 1:
             if player_contains_ace:
