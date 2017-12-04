@@ -43,8 +43,8 @@ class Button:
 
     # draw the button in a "pressed" state
     def press(self):
-        self.image.fill((224,224,224))
-        pygame.draw.line(self.image, (96, 96, 96), (0, ), (self.ix+8, 0))
+        self.image.fill((224, 224, 224))
+        pygame.draw.line(self.image, (96, 96, 96), (0, 0), (self.ix+8, 0))
         pygame.draw.line(self.image, (96, 96, 96), (0, 0), (0, self.ix+8))
         pygame.draw.line(self.image, (96, 96, 96), (1, 1), (self.ix+7, 1))
         pygame.draw.line(self.image, (96, 96, 96), (1, 1), (1, self.ix+7))
