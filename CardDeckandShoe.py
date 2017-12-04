@@ -27,7 +27,7 @@ class Deck:
                 self.cards += [Card(rank_ctr, suit_ctr, card_id)]
                 card_id += 1
 
-    def draw_card(self):
+    def draw_card_from_deck(self):
         return self.cards.pop()
 
     def is_deck_empty(self):
@@ -54,11 +54,5 @@ class Shoe:
     def draw_card_from_shoe(self):
         for deck in self.decks:
             if not deck.is_deck_empty():
-                return deck.draw_card()
-
-
-
-
-
-
+                return deck.draw_card_from_deck()
 
