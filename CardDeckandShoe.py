@@ -34,7 +34,7 @@ class Deck:
         return len(self.cards) == 0
 
     def card_back_to_deck(self, c):
-        self.cards += [c]
+        return self.cards.append(c)
 
     def shuffle_deck(self):
         random.shuffle(self.cards)
@@ -42,7 +42,7 @@ class Deck:
 
 class Shoe:
 
-    def __init__(self, number_of_decks=1):
+    def __init__(self, number_of_decks):
         self.number_of_decks = number_of_decks
         self.decks = [Deck() for _ in range(number_of_decks)]
 
