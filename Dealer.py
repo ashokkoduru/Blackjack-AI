@@ -53,7 +53,7 @@ class Dealer:
         self.dealer_won = False
         self.game_done = False
         self.hand_player = []
-        self.hand_player = []
+        self.hand_dealer = []
 
         while True:
             self.play()
