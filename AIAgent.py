@@ -73,7 +73,7 @@ class FeatureAgent:
         return q_value
 
     def get_state(self):
-        return (self.dealer.get_value_player(), self.dealer.get_player_contains_ace()), (self.dealer.get_hand_dealer(), self.dealer.get_dealer_contains_ace())
+        return (self.dealer.get_value_player(), self.dealer.get_player_contains_ace()), (self.dealer.get_value_dealer(), self.dealer.get_dealer_contains_ace())
 
     def update(self, state, action, next_state, reward):
         features = self.featExtractor.getFeatures(state, action, self.dealer.get_cards_discarded())
@@ -81,6 +81,7 @@ class FeatureAgent:
         for action in features.sortedKeys():
             weight = self.weights[action] + self.alpha * ((reward + self.discount * self.get_value(next_state)) - self.get_q_value(state, action)) * features[action]
             self.weights[action] = weight
+        return
 
     def get_value(self, state):
         max_value = -99999999
@@ -146,7 +147,7 @@ class QLearningAgent:
         return self.q_values[state, action]
 
     def get_state(self):
-        return (self.dealer.get_value_player(), self.dealer.get_player_contains_ace()), (self.dealer.get_hand_dealer(), self.dealer.get_dealer_contains_ace())
+        return (self.dealer.get_value_player(), self.dealer.get_player_contains_ace()), (self.dealer.get_value_dealer(), self.dealer.get_dealer_contains_ace())
 
     def update(self, state, action, next_state, reward):
         q_value = self.get_q_value(state, action) + self.alpha * (reward + self.discount * self.get_value(next_state) - self.get_q_value(state, action))
