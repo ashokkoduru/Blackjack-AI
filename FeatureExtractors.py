@@ -52,9 +52,9 @@ class SimpleExtractor(FeatureExtractor):
 
         if action == 1:
             if player_contains_ace:
-                features['value_player'] = (31.0 - value_player)/10.0
+                features['value_player'] = (31.0 - value_player)/10
             else:
-                features['value_player'] = (21.0 - value_player)/10.0
+                features['value_player'] = (21.0 - value_player)/10
 
             discard_feature_value = float(value_discarded)/len(discarded)
             features['discarded'] = 1.0 if discard_feature_value > 9.0 else 0
