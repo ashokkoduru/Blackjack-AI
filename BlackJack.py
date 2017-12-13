@@ -5,7 +5,7 @@
 # Created in PyCharm
 # ---------------------------------------- #
 
-import sys, pygame, Buttons
+import sys
 import Dealer, AIAgent, util, os
 import CardDeckandShoe
 from AIAgent import *
