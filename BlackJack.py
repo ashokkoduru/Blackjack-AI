@@ -1,5 +1,5 @@
 # ---------------------------------------- #
-# Author   : Ashok Koduru
+# Author   : Ashok Koduru, Bhushan Mohite
 # Project  : 2python-random
 # Date     : 04th 12, 2017
 # Created in PyCharm
@@ -9,7 +9,6 @@ import sys, pygame, Buttons
 import Dealer, AIAgent, util, os
 import CardDeckandShoe
 from AIAgent import *
-from glob import glob
 
 
 def explore(agent):

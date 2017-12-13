@@ -1,5 +1,5 @@
 # ---------------------------------------- #
-# Author   : Ashok Koduru
+# Author   : Ashok Koduru, Bhushan Mohite
 # Project  : 2python-random
 # Date     : 04th 12, 2017
 # Created in PyCharm

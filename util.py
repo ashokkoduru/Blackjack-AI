@@ -1,5 +1,5 @@
 # ---------------------------------------- #
-# Author   : Ashok Koduru
+# Author   : Ashok Koduru, Bhushan Mohite
 # Project  : Blackjack-AI
 # Date     : 02nd Dec 12, 2017
 # Created in PyCharm
